@@ -1,0 +1,25 @@
+import java.util.Arrays;
+import java.util.Random;
+public class Prac312 {
+    public static void main(String[] args) {
+        int [] list = new int[4] ;
+        int [] mas = new int[4] ;
+        Random rand = new Random();
+        int r=0;
+        for (int i = 0; i< list.length; i++){
+            r = rand.nextInt(90) + 10;
+            list [i] = r;
+            mas [i] = r;
+
+            }
+        System.out.printf("%s, %s, %s, %s%n",list[0],list[1],list[2],list[3]);
+        Arrays.sort(mas);
+        Boolean result = Arrays.equals(list,mas);
+        System.out.println(Arrays.equals(list,mas)?"Массив строго возрастающий":"Массив не возрастающий");
+
+        }
+
+
+
+    }
+
