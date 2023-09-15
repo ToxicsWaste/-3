@@ -1,0 +1,46 @@
+import java.util.*;
+public class prac313 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        Random rand = new Random();
+
+        boolean f = false;
+        while (!f) {
+            System.out.println("Введите натуральное число");
+            double n =  in.nextDouble();
+            int i =(int) n;
+            if(n<=0){
+                System.out.println("Пожалуйста повторите");
+                continue;
+            }
+
+            else if (n != i) {
+                System.out.println("Пожалуйста повторите");
+                continue;
+
+            }
+
+            else {
+                int [] list = new int [i];
+                ArrayList<Integer> mas = new ArrayList<>();
+                for (int r = 0; r<list.length; r++){
+                    int p = rand.nextInt(i);
+                    list [r] = p;
+                    if (p%2 == 0){
+                        mas.add(p);
+                    }
+                    System.out.println(p);
+
+                }
+                for (int j = 0; j<mas.size(); j++){
+                    System.out.println(mas.get(j));
+                }
+
+
+
+            }
+
+
+        }
+}
+}
